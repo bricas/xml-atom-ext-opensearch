@@ -33,7 +33,9 @@ XML::Atom::Ext::OpenSearch - XML::Atom extension for OpenSearch data
 
 
 BEGIN {
-    XML::Atom::Feed->mk_elem_accessors( qw( totalResults startIndex itemsPerPage ) );
+    XML::Atom::Feed->mk_elem_accessors(qw(totalResults startIndex itemsPerPage),
+            [ XML::Atom::Namespace->new("opensearch" => q{http://a9.com/-/spec/opensearch/1.1/} ) ] );
+    #XML::Atom::Feed->mk_elem_accessors( qw( totalResults startIndex itemsPerPage ) );
     XML::Atom::Feed->mk_object_accessor( os_link => 'XML::Atom::Ext::OpenSearch::Link' );
     XML::Atom::Feed->mk_object_accessor( Query => 'XML::Atom::Ext::OpenSearch::Query' );
 }
@@ -43,7 +45,7 @@ BEGIN {
 =cut
 
 sub element_ns {
-    return 'http://a9.com/-/spec/opensearch/1.1/';
+    return XML::Atom::Namespace->new("opensearch" => q{http://a9.com/-/spec/opensearch/1.1/} );
 }
 
 =head1 AUTHOR
