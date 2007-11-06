@@ -3,7 +3,6 @@ use Test::More tests => 8;
 use strict;
 use XML::Atom::Feed;
 use XML::Atom::Ext::OpenSearch;
-use XML::Atom::Ext::OpenSearch::Link;
 use XML::Atom::Ext::OpenSearch::Query;
 
 my @accessors = qw( totalResults startIndex itemsPerPage );
