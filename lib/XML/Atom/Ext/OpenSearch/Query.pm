@@ -19,10 +19,12 @@ XML::Atom::Ext::OpenSearch::Link - OpenSearch query element
 =cut
 
 BEGIN {
-    __PACKAGE__->mk_attr_accessors( qw(
+    __PACKAGE__->mk_attr_accessors(
+        qw(
             role title osd totalResults searchTerms count startIndex
             startPage language outputEncoding inputEncoding
-    ) );
+            )
+    );
 }
 
 =head2 element_name()
@@ -30,7 +32,7 @@ BEGIN {
 =cut
 
 sub element_name {
-    return 'Query'
+    return 'Query';
 }
 
 =head2 element_ns()
@@ -43,15 +45,11 @@ sub element_ns {
 
 =head1 AUTHOR
 
-=over 4 
-
-=item * Brian Cassidy E<lt>bricas@cpan.orgE<gt>
-
-=back
+Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2006 by Brian Cassidy
+Copyright 2007 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 

@@ -31,13 +31,20 @@ XML::Atom::Ext::OpenSearch - XML::Atom extension for OpenSearch data
 
 =cut
 
-
 BEGIN {
-    XML::Atom::Feed->mk_elem_accessors(qw(totalResults startIndex itemsPerPage),
-            [ XML::Atom::Namespace->new("opensearch" => q{http://a9.com/-/spec/opensearch/1.1/} ) ] );
-    #XML::Atom::Feed->mk_elem_accessors( qw( totalResults startIndex itemsPerPage ) );
-    XML::Atom::Feed->mk_object_accessor( os_link => 'XML::Atom::Ext::OpenSearch::Link' );
-    XML::Atom::Feed->mk_object_accessor( Query => 'XML::Atom::Ext::OpenSearch::Query' );
+    XML::Atom::Feed->mk_elem_accessors(
+        qw(totalResults startIndex itemsPerPage),
+        [   XML::Atom::Namespace->new(
+                "opensearch" => q{http://a9.com/-/spec/opensearch/1.1/}
+            )
+        ]
+    );
+
+#XML::Atom::Feed->mk_elem_accessors( qw( totalResults startIndex itemsPerPage ) );
+    XML::Atom::Feed->mk_object_accessor(
+        os_link => 'XML::Atom::Ext::OpenSearch::Link' );
+    XML::Atom::Feed->mk_object_accessor(
+        Query => 'XML::Atom::Ext::OpenSearch::Query' );
 }
 
 =head2 element_ns()
@@ -45,20 +52,17 @@ BEGIN {
 =cut
 
 sub element_ns {
-    return XML::Atom::Namespace->new("opensearch" => q{http://a9.com/-/spec/opensearch/1.1/} );
+    return XML::Atom::Namespace->new(
+        "opensearch" => q{http://a9.com/-/spec/opensearch/1.1/} );
 }
 
 =head1 AUTHOR
 
-=over 4 
-
-=item * Brian Cassidy E<lt>bricas@cpan.orgE<gt>
-
-=back
+Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2006 by Brian Cassidy
+Copyright 2007 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
