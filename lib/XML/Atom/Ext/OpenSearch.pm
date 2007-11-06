@@ -25,8 +25,6 @@ XML::Atom::Ext::OpenSearch - XML::Atom extension for OpenSearch data
 
 =head2 itemsPerPage( $items )
 
-=head2 os_link( $object )
-
 =head2 Query( $object )
 
 =cut
@@ -40,9 +38,6 @@ BEGIN {
         ]
     );
 
-#XML::Atom::Feed->mk_elem_accessors( qw( totalResults startIndex itemsPerPage ) );
-    XML::Atom::Feed->mk_object_accessor(
-        os_link => 'XML::Atom::Ext::OpenSearch::Link' );
     XML::Atom::Feed->mk_object_accessor(
         Query => 'XML::Atom::Ext::OpenSearch::Query' );
 }

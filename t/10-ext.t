@@ -26,15 +26,6 @@ for ( @accessors ) {
     like $xml, qr/<(?:\w+:)$_ xmlns:$prefix="$uri">/;
 }
 
-# Link test
-my $link = XML::Atom::Ext::OpenSearch::Link->new;
-$link->href( 'http://example.com' );
-isa_ok( $link, 'XML::Atom::Ext::OpenSearch::Link' );
-
-$feed->os_link( $link );
-
-like $feed->as_xml, qr/<(?:\w+:)link xmlns:$prefix="$uri"/;
-
 # Query test
 my $query = XML::Atom::Ext::OpenSearch::Query->new;
 $query->searchTerms( 'test' );
