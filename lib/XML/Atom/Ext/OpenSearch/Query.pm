@@ -11,17 +11,40 @@ XML::Atom::Ext::OpenSearch::Query - OpenSearch query element
 
 =head1 SYNOPSIS
 
+    my $query = XML::Atom::Ext:OpenSearch::Query->new;
+    $query->title( 'foo' );
+    $feed->add_Query( $query );
 
 =head1 DESCRIPTION
 
 =head1 METHODS
+
+=head2 role( )
+
+=head2 title( )
+
+=head2 totalResults( )
+
+=head2 searchTerms( )
+
+=head2 count( )
+
+=head2 startIndex( )
+
+=head2 startPage( )
+
+=head2 language( )
+
+=head2 outputEncoding( )
+
+=head2 inputEncoding( )
 
 =cut
 
 BEGIN {
     __PACKAGE__->mk_attr_accessors(
         qw(
-            role title osd totalResults searchTerms count startIndex
+            role title totalResults searchTerms count startIndex
             startPage language outputEncoding inputEncoding
             )
     );

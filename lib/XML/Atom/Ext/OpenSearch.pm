@@ -16,6 +16,8 @@ XML::Atom::Ext::OpenSearch - XML::Atom extension for OpenSearch data
 
 =head1 SYNOPSIS
 
+    my $feed = XML::Atom::Feed->new;
+    $feed->totalResults( $total );
 
 =head1 DESCRIPTION
 
@@ -27,7 +29,9 @@ XML::Atom::Ext::OpenSearch - XML::Atom extension for OpenSearch data
 
 =head2 itemsPerPage( $items )
 
-=head2 Query( $object )
+=head2 Query( )
+
+=head2 add_Query( $object )
 
 =cut
 
