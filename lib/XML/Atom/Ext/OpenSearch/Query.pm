@@ -7,7 +7,7 @@ use base qw( XML::Atom::Base );
 
 =head1 NAME
 
-XML::Atom::Ext::OpenSearch::Link - OpenSearch query element
+XML::Atom::Ext::OpenSearch::Query - OpenSearch query element
 
 =head1 SYNOPSIS
 

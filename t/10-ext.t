@@ -3,7 +3,6 @@ use Test::More tests => 8;
 use strict;
 use XML::Atom::Feed;
 use XML::Atom::Ext::OpenSearch;
-use XML::Atom::Ext::OpenSearch::Query;
 
 my @accessors = qw( totalResults startIndex itemsPerPage );
 my $namespace = XML::Atom::Ext::OpenSearch->element_ns;
@@ -30,6 +29,6 @@ my $query = XML::Atom::Ext::OpenSearch::Query->new;
 $query->searchTerms( 'test' );
 isa_ok( $query, 'XML::Atom::Ext::OpenSearch::Query' );
 
-$feed->Query( $query );
+$feed->add_Query( $query );
 
 like $feed->as_xml, qr/<(?:\w+:)Query xmlns:$prefix="$uri"/;

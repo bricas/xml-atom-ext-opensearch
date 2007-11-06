@@ -6,6 +6,8 @@ use warnings;
 use base qw( XML::Atom::Base );
 use XML::Atom::Feed;
 
+use XML::Atom::Ext::OpenSearch::Query;
+
 our $VERSION = '0.01';
 
 =head1 NAME
@@ -38,7 +40,7 @@ BEGIN {
         ]
     );
 
-    XML::Atom::Feed->mk_object_accessor(
+    XML::Atom::Feed->mk_object_list_accessor(
         Query => 'XML::Atom::Ext::OpenSearch::Query' );
 }
 
