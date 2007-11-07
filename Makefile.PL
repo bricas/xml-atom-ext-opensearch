@@ -7,7 +7,7 @@ if ( -e 'MANIFEST.SKIP' ) {
 name 'XML-Atom-Ext-OpenSearch';
 all_from 'lib/XML/Atom/Ext/OpenSearch.pm';
 
-requires 'XML::Atom' => '0.26';
+requires 'XML::Atom' => '0.28';
 
 test_requires 'Test::More';
 
