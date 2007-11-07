@@ -1,4 +1,6 @@
-Revision history for Perl extension XML::Atom::Ext::OpenSearch.
+# Revision history for Perl extension XML::Atom::Ext::OpenSearch.
 
-0.01  Wed Aug 16 2006
+0.01:
+  release_date: 2007-11-07
+  changes:
     - original version
