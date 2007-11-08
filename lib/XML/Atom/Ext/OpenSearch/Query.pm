@@ -19,7 +19,7 @@ XML::Atom::Ext::OpenSearch::Query - OpenSearch query element
 
 This elements represents query that was or can be performed by the client. It
 can be used to echo the request, or even provide an example query. Review
-L<the specification|http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_Query_element>
+the specification (http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_Query_element)
 for more information.
 
 =head1 METHODS
