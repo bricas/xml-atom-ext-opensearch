@@ -17,27 +17,32 @@ XML::Atom::Ext::OpenSearch::Query - OpenSearch query element
 
 =head1 DESCRIPTION
 
+This elements represents query that was or can be performed by the client. It
+can be used to echo the request, or even provide an example query. Review
+L<the specification|http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_Query_element>
+for more information.
+
 =head1 METHODS
 
-=head2 role( )
+=head2 role( $role )
 
-=head2 title( )
+=head2 title( $title )
 
-=head2 totalResults( )
+=head2 totalResults( $total )
 
-=head2 searchTerms( )
+=head2 searchTerms( $terms )
 
-=head2 count( )
+=head2 count( $count )
 
-=head2 startIndex( )
+=head2 startIndex( $index )
 
-=head2 startPage( )
+=head2 startPage( $page )
 
-=head2 language( )
+=head2 language( $language )
 
-=head2 outputEncoding( )
+=head2 outputEncoding( $encoding )
 
-=head2 inputEncoding( )
+=head2 inputEncoding( $encoding )
 
 =cut
 
@@ -50,7 +55,9 @@ BEGIN {
     );
 }
 
-=head2 element_name()
+=head2 element_name( )
+
+Returns 'Query'.
 
 =cut
 
@@ -58,7 +65,9 @@ sub element_name {
     return 'Query';
 }
 
-=head2 element_ns()
+=head2 element_ns( )
+
+Returns the opensearch namespace, C<http://a9.com/-/spec/opensearch/1.1>'.
 
 =cut
 

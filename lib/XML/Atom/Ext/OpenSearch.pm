@@ -16,10 +16,19 @@ XML::Atom::Ext::OpenSearch - XML::Atom extension for OpenSearch data
 
 =head1 SYNOPSIS
 
+    use XML::Atom::Feed;
+    use XML::Atom::Ext::OpenSearch;
+    
     my $feed = XML::Atom::Feed->new;
     $feed->totalResults( $total );
 
 =head1 DESCRIPTION
+
+This module is an extension to XML::Atom which will let you read and write 
+feeds that use OpenSearch data. OpenSearch provides some extra elements
+to serialize search results as an Atom feed. See
+L<the specification|http://www.opensearch.org/Specifications/OpenSearch/1.1>
+for more information.
 
 =head1 METHODS
 
@@ -30,6 +39,9 @@ XML::Atom::Ext::OpenSearch - XML::Atom extension for OpenSearch data
 =head2 itemsPerPage( $items )
 
 =head2 Query( )
+
+In list context, returns all query elements in the document. In scalar
+context, returns the first query element found.
 
 =head2 add_Query( $object )
 
@@ -48,7 +60,9 @@ BEGIN {
         Query => 'XML::Atom::Ext::OpenSearch::Query' );
 }
 
-=head2 element_ns()
+=head2 element_ns( )
+
+Returns the opensearch namespace, C<http://a9.com/-/spec/opensearch/1.1>'.
 
 =cut
 
