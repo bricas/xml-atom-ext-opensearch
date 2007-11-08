@@ -62,7 +62,7 @@ BEGIN {
 
 =head2 element_ns( )
 
-Returns the opensearch namespace, C<http://a9.com/-/spec/opensearch/1.1>'.
+Returns the opensearch namespace, C<http://a9.com/-/spec/opensearch/1.1>.
 
 =cut
 
