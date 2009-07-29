@@ -1,11 +1,12 @@
 # Revision history for Perl extension XML::Atom::Ext::OpenSearch.
 
 0.02:
-  date: TBD
-  maintainer: TBD
+  date: Wed, 29 Jul 2009 10:46:20 -0400
+  maintainer: Brian Cassidy <bricas@cpan.org>
   urgency: low
   changes:
     - pod fixes
+    - minor dist fixes
 
 0.01:
   date: Wed, 07 Nov 2007 08:39:38 -0400

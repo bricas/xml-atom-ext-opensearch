@@ -1,4 +1,4 @@
-use inc::Module::Install 0.68;
+use inc::Module::Install 0.91;
 
 if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/XML/Atom/Ext/OpenSearch.pm > README' );
@@ -12,6 +12,6 @@ all_from 'lib/XML/Atom/Ext/OpenSearch.pm';
 requires 'XML::Atom' => '0.28';
 
 test_requires 'Test::More';
+extra_tests;
 
-auto_install;
 WriteAll;
