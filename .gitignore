@@ -13,3 +13,4 @@ Debian*
 README
 *.bs
 *~
+*.tar.gz
